@@ -1,5 +1,6 @@
 import {Color, DropShadow, Image, Lottie, Toward, Typograph, Font, LinearGradient, Point2D, TextAlignment} from '@diez/prefabs';
 import {Margin} from './components/Margin';
+import {diezDemoTokens,diezDemoImages} from "./designs/DiezDemo.figma";
 
 /**
  * You can collect anything inside a Diez component. Design tokens specified as
@@ -10,6 +11,7 @@ const colors = {
   black: Color.hex('#000010'),
   purple: Color.rgb(86, 35, 238),
   darkPurple: Color.rgb(22, 11, 54),
+  
 }
 
 /**
@@ -20,6 +22,7 @@ const palette = {
   text: colors.black,
   caption: colors.purple,
   headerBackground: LinearGradient.make(Toward.Bottom, colors.darkPurple, colors.black),
+  ...diezDemoTokens.colors
 }
 
 /**
@@ -55,6 +58,8 @@ const typography = {
     fontSize: 14,
     color: palette.caption,
   }),
+
+  ...diezDemoTokens.typography
 }
 
 /**
@@ -65,6 +70,7 @@ const typography = {
 const images = {
   logo: Image.responsive('assets/logo.png', 52, 48),
   masthead: Image.responsive('assets/masthead.png', 208, 88),
+  ...diezDemoImages
 }
 
 /**
